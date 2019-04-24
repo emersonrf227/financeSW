@@ -52,18 +52,40 @@ class CadUsersViewController: UIViewController {
     
 
     @IBAction func btEnviar(_ sender: Any) {
+        
+        if (lbNome.text == ""){
+            showToast(message: "Campo nome em branco")
+            return
+            
+        }
+        else if (lbEmail.text == ""){
+            showToast(message: "Campo E-mail em branco")
+            return
+        }
+        
+        else if (lbSenha.text == ""){
+            
+            showToast(message: "Campo senha em branco")
+            return
+        }
+        
+        
+        
+        
+        
         removeListener()
         Auth.auth().createUser(withEmail: lbEmail.text!, password: lbSenha.text!) { (result, error) in
             if error == nil {
+                self.showToast(message: "Cadastro realizado")
                 self.performUserChange(user: result?.user)
             } else {
                 print(error!)
+                self.showToast(message: "Erro no cadastro")
             }
         }
     }
 
 }
 
-    
 
 

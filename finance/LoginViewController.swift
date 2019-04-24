@@ -29,11 +29,16 @@ class LoginViewController: UIViewController {
         })
 
     }
+ 
+
     
     func showMainScreen(user: User?, animated: Bool = true) {
         print("Indo para a próxima tela")
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: ViewController.self)) else {return}
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: MainViewController.self)) else {
+            print("Caiu no else")
+            return}
         navigationController?.pushViewController(vc, animated: animated)
+          print("Desceu")
     }
     
     func performUserChange(user: User?) {
@@ -63,13 +68,38 @@ class LoginViewController: UIViewController {
         removeListener()
         Auth.auth().signIn(withEmail: lbLogin.text!, password: lbSenha.text!)             { (result, error) in
             if error == nil {
+                self.showToast(message : "Login Realizado")
+                print("Foi para o login")
                 self.performUserChange(user: result?.user)
+              
             } else {
                 print(error!)
+       
             }
         }
     }
 
-    
+   
 
 }
+
+extension UIViewController {
+    
+    func showToast(message : String) {
+        
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 145, y: self.view.frame.size.height-100, width: 290, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center;
+        toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 7.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    } }
