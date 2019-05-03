@@ -40,6 +40,11 @@ class CadUsersViewController: UIViewController {
                 print(error!)
             }
             self.ref.child("Usuario").child(user.uid).setValue(["email": self.lbEmail.text, "nome": self.lbNome.text])
+            
+            
+            print("Indo para a próxima tela")
+            
+            
         }
     }
 
@@ -49,6 +54,10 @@ class CadUsersViewController: UIViewController {
             Auth.auth().removeStateDidChangeListener(handle)
         }
     }
+    
+    
+    
+  
     
 
     @IBAction func btEnviar(_ sender: Any) {

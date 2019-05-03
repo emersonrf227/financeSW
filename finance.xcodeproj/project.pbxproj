@@ -7,20 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C281A62227A673200ED1D13 /* SairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C281A61227A673200ED1D13 /* SairViewController.swift */; };
+		1C2D19C32279E81F0063D40D /* ReceitaItens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D19C22279E81F0063D40D /* ReceitaItens.swift */; };
+		1C2D19C52279E8900063D40D /* DespesasItens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D19C42279E8900063D40D /* DespesasItens.swift */; };
+		1C2D19C9227A0A620063D40D /* Specialist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D19C8227A0A620063D40D /* Specialist.swift */; };
 		1C700C77226CE14F001BC3D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C700C76226CE14F001BC3D2 /* AppDelegate.swift */; };
 		1C700C79226CE14F001BC3D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C700C78226CE14F001BC3D2 /* ViewController.swift */; };
 		1C700C7C226CE14F001BC3D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C700C7A226CE14F001BC3D2 /* Main.storyboard */; };
 		1C700C7E226CE151001BC3D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C700C7D226CE151001BC3D2 /* Assets.xcassets */; };
 		1C700C81226CE151001BC3D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C700C7F226CE151001BC3D2 /* LaunchScreen.storyboard */; };
+		1C730C9C227A4F21007523A8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C730C9B227A4F21007523A8 /* MapViewController.swift */; };
 		1C76D94C226FE5EF0086560F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76D94B226FE5EF0086560F /* LoginViewController.swift */; };
 		1C76D94E226FE8990086560F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C76D94D226FE8990086560F /* GoogleService-Info.plist */; };
 		1C76D950226FF39D0086560F /* CadUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76D94F226FF39D0086560F /* CadUsersViewController.swift */; };
-		1C76D95222700D780086560F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76D95122700D780086560F /* MainViewController.swift */; };
+		1C8B41E12277DB4B00E9D0B9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B41E02277DB4B00E9D0B9 /* MainTabBarController.swift */; };
 		70838951DC2178C623EF8EDD /* Pods_finance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3EE3FB61474905883D4D385 /* Pods_finance.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1282A08D133D4B010F2265B0 /* Pods-finance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finance.release.xcconfig"; path = "Target Support Files/Pods-finance/Pods-finance.release.xcconfig"; sourceTree = "<group>"; };
+		1C281A61227A673200ED1D13 /* SairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SairViewController.swift; sourceTree = "<group>"; };
+		1C2D19C22279E81F0063D40D /* ReceitaItens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaItens.swift; sourceTree = "<group>"; };
+		1C2D19C42279E8900063D40D /* DespesasItens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespesasItens.swift; sourceTree = "<group>"; };
+		1C2D19C8227A0A620063D40D /* Specialist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specialist.swift; sourceTree = "<group>"; };
 		1C700C73226CE14F001BC3D2 /* finance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C700C76226CE14F001BC3D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C700C78226CE14F001BC3D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,10 +37,11 @@
 		1C700C7D226CE151001BC3D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C700C80226CE151001BC3D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C700C82226CE151001BC3D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C730C9B227A4F21007523A8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1C76D94B226FE5EF0086560F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1C76D94D226FE8990086560F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C76D94F226FF39D0086560F /* CadUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadUsersViewController.swift; sourceTree = "<group>"; };
-		1C76D95122700D780086560F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1C8B41E02277DB4B00E9D0B9 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		E3EE3FB61474905883D4D385 /* Pods_finance.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_finance.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECB649E69432811A45DAF7F /* Pods-finance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finance.debug.xcconfig"; path = "Target Support Files/Pods-finance/Pods-finance.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,15 +80,20 @@
 			isa = PBXGroup;
 			children = (
 				1C700C76226CE14F001BC3D2 /* AppDelegate.swift */,
+				1C2D19C22279E81F0063D40D /* ReceitaItens.swift */,
+				1C2D19C42279E8900063D40D /* DespesasItens.swift */,
 				1C700C78226CE14F001BC3D2 /* ViewController.swift */,
-				1C76D95122700D780086560F /* MainViewController.swift */,
 				1C76D94B226FE5EF0086560F /* LoginViewController.swift */,
 				1C76D94F226FF39D0086560F /* CadUsersViewController.swift */,
 				1C700C7A226CE14F001BC3D2 /* Main.storyboard */,
+				1C281A61227A673200ED1D13 /* SairViewController.swift */,
+				1C730C9B227A4F21007523A8 /* MapViewController.swift */,
+				1C2D19C8227A0A620063D40D /* Specialist.swift */,
 				1C76D94D226FE8990086560F /* GoogleService-Info.plist */,
 				1C700C7D226CE151001BC3D2 /* Assets.xcassets */,
 				1C700C7F226CE151001BC3D2 /* LaunchScreen.storyboard */,
 				1C700C82226CE151001BC3D2 /* Info.plist */,
+				1C8B41E02277DB4B00E9D0B9 /* MainTabBarController.swift */,
 			);
 			path = finance;
 			sourceTree = "<group>";
@@ -237,9 +252,14 @@
 			files = (
 				1C76D950226FF39D0086560F /* CadUsersViewController.swift in Sources */,
 				1C76D94C226FE5EF0086560F /* LoginViewController.swift in Sources */,
+				1C2D19C52279E8900063D40D /* DespesasItens.swift in Sources */,
+				1C730C9C227A4F21007523A8 /* MapViewController.swift in Sources */,
+				1C2D19C9227A0A620063D40D /* Specialist.swift in Sources */,
+				1C8B41E12277DB4B00E9D0B9 /* MainTabBarController.swift in Sources */,
 				1C700C79226CE14F001BC3D2 /* ViewController.swift in Sources */,
+				1C281A62227A673200ED1D13 /* SairViewController.swift in Sources */,
+				1C2D19C32279E81F0063D40D /* ReceitaItens.swift in Sources */,
 				1C700C77226CE14F001BC3D2 /* AppDelegate.swift in Sources */,
-				1C76D95222700D780086560F /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

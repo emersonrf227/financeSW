@@ -19,15 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoF" translatesAutoresizingMaskIntoConstraints="NO" id="7Ah-SE-BAz">
-                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <rect key="frame" x="199" y="445" width="16" height="16"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
-                            <constraint firstItem="7Ah-SE-BAz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="284" id="3QH-z1-O2s"/>
-                            <constraint firstItem="7Ah-SE-BAz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="9X1-iY-C1p"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Ah-SE-BAz" secondAttribute="bottom" constant="294" id="PfN-nZ-Tvb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Ah-SE-BAz" secondAttribute="trailing" constant="87" id="WZf-0s-6pV"/>
+                            <constraint firstItem="7Ah-SE-BAz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DIf-Ox-kyb"/>
+                            <constraint firstItem="7Ah-SE-BAz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Wnb-mD-UOd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

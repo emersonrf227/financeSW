@@ -11,7 +11,7 @@ import Firebase
 
 
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var lbLogin: UITextField!
     @IBOutlet weak var lbSenha: UITextField!
@@ -20,6 +20,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+     
 
         handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
             print("Usuário logado:", user?.email)
@@ -30,14 +32,24 @@ class LoginViewController: UIViewController {
 
     }
  
-
+    
+    
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        self.view.endEditing(true)
+        
+        return true
+        
+    }
     
     func showMainScreen(user: User?, animated: Bool = true) {
         print("Indo para a próxima tela")
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: MainViewController.self)) else {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: String(describing: MainTabBarController.self)) else {
             print("Caiu no else")
             return}
-        navigationController?.pushViewController(vc, animated: animated)
+        self.present(vc, animated: true, completion: nil)
           print("Desceu")
     }
     
@@ -49,7 +61,9 @@ class LoginViewController: UIViewController {
             if error != nil {
                 print(error!)
             }
+            self.showToast(message : "Login Realizado")
             self.showMainScreen(user: user, animated: true)
+            
         }
     }
     
@@ -68,7 +82,7 @@ class LoginViewController: UIViewController {
         removeListener()
         Auth.auth().signIn(withEmail: lbLogin.text!, password: lbSenha.text!)             { (result, error) in
             if error == nil {
-                self.showToast(message : "Login Realizado")
+               
                 print("Foi para o login")
                 self.performUserChange(user: result?.user)
               
@@ -78,7 +92,9 @@ class LoginViewController: UIViewController {
             }
         }
     }
-
+    
+ 
+  
    
 
 }
