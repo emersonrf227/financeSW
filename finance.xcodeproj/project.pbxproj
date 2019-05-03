@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C281A62227A673200ED1D13 /* SairViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C281A61227A673200ED1D13 /* SairViewController.swift */; };
+		1C281A64227BE3A200ED1D13 /* CadReceitaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C281A63227BE3A200ED1D13 /* CadReceitaViewController.swift */; };
+		1C281A66227BE3BA00ED1D13 /* CadDespViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C281A65227BE3BA00ED1D13 /* CadDespViewController.swift */; };
 		1C2D19C32279E81F0063D40D /* ReceitaItens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D19C22279E81F0063D40D /* ReceitaItens.swift */; };
 		1C2D19C52279E8900063D40D /* DespesasItens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D19C42279E8900063D40D /* DespesasItens.swift */; };
 		1C2D19C9227A0A620063D40D /* Specialist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D19C8227A0A620063D40D /* Specialist.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		1282A08D133D4B010F2265B0 /* Pods-finance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finance.release.xcconfig"; path = "Target Support Files/Pods-finance/Pods-finance.release.xcconfig"; sourceTree = "<group>"; };
 		1C281A61227A673200ED1D13 /* SairViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SairViewController.swift; sourceTree = "<group>"; };
+		1C281A63227BE3A200ED1D13 /* CadReceitaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadReceitaViewController.swift; sourceTree = "<group>"; };
+		1C281A65227BE3BA00ED1D13 /* CadDespViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadDespViewController.swift; sourceTree = "<group>"; };
 		1C2D19C22279E81F0063D40D /* ReceitaItens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceitaItens.swift; sourceTree = "<group>"; };
 		1C2D19C42279E8900063D40D /* DespesasItens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DespesasItens.swift; sourceTree = "<group>"; };
 		1C2D19C8227A0A620063D40D /* Specialist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specialist.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				1C700C78226CE14F001BC3D2 /* ViewController.swift */,
 				1C76D94B226FE5EF0086560F /* LoginViewController.swift */,
 				1C76D94F226FF39D0086560F /* CadUsersViewController.swift */,
+				1C281A63227BE3A200ED1D13 /* CadReceitaViewController.swift */,
+				1C281A65227BE3BA00ED1D13 /* CadDespViewController.swift */,
 				1C700C7A226CE14F001BC3D2 /* Main.storyboard */,
 				1C281A61227A673200ED1D13 /* SairViewController.swift */,
 				1C730C9B227A4F21007523A8 /* MapViewController.swift */,
@@ -258,6 +264,8 @@
 				1C8B41E12277DB4B00E9D0B9 /* MainTabBarController.swift in Sources */,
 				1C700C79226CE14F001BC3D2 /* ViewController.swift in Sources */,
 				1C281A62227A673200ED1D13 /* SairViewController.swift in Sources */,
+				1C281A64227BE3A200ED1D13 /* CadReceitaViewController.swift in Sources */,
+				1C281A66227BE3BA00ED1D13 /* CadDespViewController.swift in Sources */,
 				1C2D19C32279E81F0063D40D /* ReceitaItens.swift in Sources */,
 				1C700C77226CE14F001BC3D2 /* AppDelegate.swift in Sources */,
 			);
