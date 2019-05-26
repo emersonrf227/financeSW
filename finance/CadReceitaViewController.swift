@@ -33,7 +33,7 @@ class CadReceitaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.title = "Cadastro de despesas"
         ref = Database.database().reference()
     }
     
@@ -43,11 +43,10 @@ class CadReceitaViewController: UIViewController {
     
     func salvarDados() {
         
-        print(self.lbValor.text)
-        
-        print(self.lbDesc.text)
+        let desc = lbDesc.text
+        let valor = lbValor.text
       
-        self.ref.child("Lancamentos").childByAutoId().setValue(["descricao": self.lbDesc.text, "valor": self.lbValor.text,])
+        self.ref.child("Lancamentos").childByAutoId().setValue(["descricao": desc, "valor": valor])
         
             
         }

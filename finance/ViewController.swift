@@ -5,7 +5,11 @@ import Firebase
 
 class ViewController: UIViewController {
     
-    var specialists: [Specialist] = []
+    var specialists: [Specialist] = [] {
+        didSet{
+            tableView.reloadData()
+        }
+    }
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,7 +25,8 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.observeAllValue()
+//        self.observeAllValue()
+        specialists = []
         self.observeChildAdded()
         
     }
@@ -32,31 +37,31 @@ class ViewController: UIViewController {
         
         root.child("Lancamentos").observe(.value, with: { (snap) in
            
-           
-            guard let dictionary = snap.value as? [String : Any] else {
-                return
-            }
+           let dictionary = snap.value as? NSDictionary
+//            guard let dictionary = snap.value as? [String : Any] else {
+//                return
+//            }
             
-            print(dictionary.count)
+//            print(dictionary.count)
             
             
             var specialistArray: [Specialist] = []
             
-            for element in dictionary {
-                
-                guard
-                    let value = element.value as? [String : String],
-                    let descricao = value["descricao"],
-                    let valor = value["valor"]
-                    else { return }
-                
-                let specialist = Specialist(descricao: descricao, valor: valor)
-                specialistArray.append(specialist)
-                
-            }
+//            for element in dictionary {
+//
+//                guard
+//                    let value = element.value as? [String : String],
+//                    let descricao = value["descricao"],
+//                    let valor = value["valor"]
+//                    else { return }
+//
+//                let specialist = Specialist(descricao: descricao, valor: valor)
+//                specialistArray.append(specialist)
+//
+//            }
             
             self.specialists = specialistArray
-            self.tableView.reloadData()
+            
             
         })
     }
@@ -66,28 +71,34 @@ class ViewController: UIViewController {
         let root = Database.database().reference()
         
         print("\n \n")
-        
+//        let userID = Auth.auth().currentUser?.uid
+//        root.child("Lancamentos").child(userID!).observe(.value) { (snapshot) in
+//            let dictionary = snapshot.value as? [String:String]
+//            print("Meu dado: \(dictionary)")
+//        }
         root.child("Lancamentos").observe(.childAdded, with: { (snap) in
-            
-            
+
+
             guard
                 let dictionary = snap.value as? [String : String],
                 let descricao = dictionary["descricao"],
                 let valor = dictionary["valor"]
                 else { return }
-            
+
+            let teste = dictionary["valor"]
+
             let specialist = Specialist(descricao: descricao, valor: valor)
-            
+
             print(specialist)
-            
+
             self.specialists.append(specialist)
-            
-            let count = self.specialists.count
-            let indexPath = IndexPath.init(row: count-1, section: 0) //
-            
-            self.tableView.beginUpdates()
-            self.tableView.insertRows(at: [indexPath], with: .left) //
-            self.tableView.endUpdates()
+
+//            let count = self.specialists.count
+//            let indexPath = IndexPath.init(row: count-1, section: 0) //
+//
+//            self.tableView.beginUpdates()
+//            self.tableView.insertRows(at: [indexPath], with: .left) //
+//            self.tableView.endUpdates()
         })
     }
     
@@ -103,7 +114,8 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         let user = self.specialists[indexPath.row]
-        
+        cell.textLabel?.text = nil
+        cell.detailTextLabel?.text = nil
         cell.textLabel?.text = user.descricao
         cell.detailTextLabel?.text = user.valor
         
