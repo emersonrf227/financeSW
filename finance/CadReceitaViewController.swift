@@ -13,47 +13,66 @@ class CadReceitaViewController: UIViewController {
     
     var handle: AuthStateDidChangeListenerHandle?
     var ref: DatabaseReference!
+    var receitaSelecionada:Specialist?
     
     
     @IBOutlet weak var lbDesc: UITextField!
-    
-   
     @IBOutlet weak var lbValor: UITextField!
     
     //Novo comentarioo
-    
- 
-    
-    
-    
-    
-    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Cadastro de despesas"
-        ref = Database.database().reference()
+        ref = Database.database().reference().child("Lancamentos")
+        if let selecionado = receitaSelecionada {
+            lbValor.text = selecionado.valor
+            lbDesc.text = selecionado.descricao
+        }
     }
     
-    
-  
-    
+    func estruturaDespesas(id:String,descricao:String,valor:String) -> [String:Any]{
+        return ["id":id,"descricao": descricao, "valor": valor]
+    }
     
     func salvarDados() {
         
-        let desc = lbDesc.text
-        let valor = lbValor.text
-      
-        self.ref.child("Lancamentos").childByAutoId().setValue(["descricao": desc, "valor": valor])
-        
-            
+        guard let desc = lbDesc.text, let valor = lbValor.text, let key = ref.childByAutoId().key else {
+            return
         }
+        let novaDespesa = estruturaDespesas(id: key, descricao: desc, valor: valor)
+        ref.child(key).setValue(novaDespesa)
+        
+    }
+    
+    
+    func atualizarDados(){
+        
+        guard let id = receitaSelecionada?.id, let desc = lbDesc.text, let valor = lbValor.text else {
+            return
+        }
+        
+        let receitaAtualizada = estruturaDespesas(id: id, descricao: desc, valor: valor)
+        ref.child(id).setValue(receitaAtualizada)
+    }
+    
+    func clearFields(){
+        lbValor.text = ""
+        lbDesc.text = ""
+    }
+  
     
     @IBAction func btCadastrar(_ sender: Any) {
         
-        salvarDados()
+        if receitaSelecionada == nil {
+            salvarDados()
+        } else {
+            atualizarDados()
+        }
+        
+        clearFields()
     }
 
 }

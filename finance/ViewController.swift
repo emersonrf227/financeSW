@@ -11,6 +11,8 @@ class ViewController: UIViewController {
         }
     }
     
+    var receitaSelecionada:Specialist?
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,6 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.dataSource = self
+        tableView.delegate = self
         
     }
     
@@ -27,26 +30,26 @@ class ViewController: UIViewController {
         
 //        self.observeAllValue()
         specialists = []
+        receitaSelecionada = nil
         self.observeChildAdded()
         
     }
     
     
-    func observeAllValue() {
-        let root = Database.database().reference()
-        
-        root.child("Lancamentos").observe(.value, with: { (snap) in
-           
-           let dictionary = snap.value as? NSDictionary
+//    func observeAllValue() {
+//        let root = Database.database().reference()
+//
+//        root.child("Lancamentos").observe(.value, with: { (snap) in
+//
 //            guard let dictionary = snap.value as? [String : Any] else {
 //                return
 //            }
-            
+//
 //            print(dictionary.count)
-            
-            
-            var specialistArray: [Specialist] = []
-            
+//
+//
+//            var specialistArray: [Specialist] = []
+//
 //            for element in dictionary {
 //
 //                guard
@@ -59,12 +62,12 @@ class ViewController: UIViewController {
 //                specialistArray.append(specialist)
 //
 //            }
-            
-            self.specialists = specialistArray
-            
-            
-        })
-    }
+//
+//            self.specialists = specialistArray
+//
+//
+//        })
+//    }
     
     
     func observeChildAdded() {
@@ -82,30 +85,27 @@ class ViewController: UIViewController {
             guard
                 let dictionary = snap.value as? [String : String],
                 let descricao = dictionary["descricao"],
-                let valor = dictionary["valor"]
+                let valor = dictionary["valor"],
+                let id = dictionary["id"]
                 else { return }
 
-            let teste = dictionary["valor"]
-
-            let specialist = Specialist(descricao: descricao, valor: valor)
+            let specialist = Specialist(descricao: descricao, valor: valor, id: id, formaPagamento: nil)
 
             print(specialist)
 
             self.specialists.append(specialist)
-
-//            let count = self.specialists.count
-//            let indexPath = IndexPath.init(row: count-1, section: 0) //
-//
-//            self.tableView.beginUpdates()
-//            self.tableView.insertRows(at: [indexPath], with: .left) //
-//            self.tableView.endUpdates()
         })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let controller = segue.destination as? CadReceitaViewController else {return}
+        controller.receitaSelecionada = receitaSelecionada
     }
     
     
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.specialists.count
     }
@@ -120,6 +120,11 @@ extension ViewController: UITableViewDataSource {
         cell.detailTextLabel?.text = user.valor
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        receitaSelecionada = specialists[indexPath.row]
+        performSegue(withIdentifier: "receitasCadastro", sender: self)
     }
     
 }

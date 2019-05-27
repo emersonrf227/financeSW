@@ -12,4 +12,6 @@ import Foundation
 struct Specialist {
     var descricao: String
     var valor: String
+    var id:String
+    var formaPagamento:String? = nil
 }
