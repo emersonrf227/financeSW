@@ -69,9 +69,6 @@ class CadDespViewController: UIViewController {
         }
         
         clearFields()
+
     }
-    
-
-   
-
 }
