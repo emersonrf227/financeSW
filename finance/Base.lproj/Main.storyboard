@@ -401,6 +401,9 @@
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="cadDespesas:" destination="vtp-xD-G2S" eventType="touchUpInside" id="6Wq-Kz-wsl"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xRy-u9-cU4">
                                 <rect key="frame" x="55" y="294" width="210" height="30"/>
@@ -437,10 +440,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IzY-RN-nSy"/>
                     </view>
+                    <connections>
+                        <outlet property="lbDesc" destination="skL-Zv-Ar0" id="Omd-Mp-aDQ"/>
+                        <outlet property="lbValor" destination="xRy-u9-cU4" id="Ydc-XK-Xhp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4p-nr-cjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2541" y="1625"/>
+            <point key="canvasLocation" x="3564" y="1263"/>
         </scene>
         <!--Despesas-->
         <scene sceneID="YKe-ha-n7Q">
@@ -614,7 +621,7 @@
         <scene sceneID="8Lt-Se-V6g">
             <objects>
                 <viewController id="ynH-iW-hAc" customClass="CadUsersViewController" customModule="finance" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Rjz-tC-hkA">
+                    <view key="view" contentMode="scaleToFill" id="Rjz-tC-hkA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

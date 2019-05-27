@@ -23,7 +23,6 @@
 		1C76D94E226FE8990086560F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C76D94D226FE8990086560F /* GoogleService-Info.plist */; };
 		1C76D950226FF39D0086560F /* CadUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C76D94F226FF39D0086560F /* CadUsersViewController.swift */; };
 		1C8B41E12277DB4B00E9D0B9 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8B41E02277DB4B00E9D0B9 /* MainTabBarController.swift */; };
-		2811262C7BFD7688330E29E4 /* libPods-finance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A3DBC2B1F27A1F2F44EF33AD /* libPods-finance.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,9 +44,6 @@
 		1C76D94D226FE8990086560F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1C76D94F226FF39D0086560F /* CadUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadUsersViewController.swift; sourceTree = "<group>"; };
 		1C8B41E02277DB4B00E9D0B9 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		43F70DF91180E3A13DB9812A /* Pods-finance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finance.release.xcconfig"; path = "Target Support Files/Pods-finance/Pods-finance.release.xcconfig"; sourceTree = "<group>"; };
-		75044720B6725B7AE481B7B7 /* Pods-finance.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finance.debug.xcconfig"; path = "Target Support Files/Pods-finance/Pods-finance.debug.xcconfig"; sourceTree = "<group>"; };
-		A3DBC2B1F27A1F2F44EF33AD /* libPods-finance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-finance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2811262C7BFD7688330E29E4 /* libPods-finance.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +63,6 @@
 				1C700C75226CE14F001BC3D2 /* finance */,
 				1C700C74226CE14F001BC3D2 /* Products */,
 				38F741EFE02256755C584C93 /* Pods */,
-				B5D6F8DB0E8ADB57180912C3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,12 +87,12 @@
 				1C281A65227BE3BA00ED1D13 /* CadDespViewController.swift */,
 				1C700C7A226CE14F001BC3D2 /* Main.storyboard */,
 				1C281A61227A673200ED1D13 /* SairViewController.swift */,
+				1C700C82226CE151001BC3D2 /* Info.plist */,
 				1C730C9B227A4F21007523A8 /* MapViewController.swift */,
 				1C2D19C8227A0A620063D40D /* Specialist.swift */,
 				1C76D94D226FE8990086560F /* GoogleService-Info.plist */,
 				1C700C7D226CE151001BC3D2 /* Assets.xcassets */,
 				1C700C7F226CE151001BC3D2 /* LaunchScreen.storyboard */,
-				1C700C82226CE151001BC3D2 /* Info.plist */,
 				1C8B41E02277DB4B00E9D0B9 /* MainTabBarController.swift */,
 			);
 			path = finance;
@@ -107,18 +101,8 @@
 		38F741EFE02256755C584C93 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				75044720B6725B7AE481B7B7 /* Pods-finance.debug.xcconfig */,
-				43F70DF91180E3A13DB9812A /* Pods-finance.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		B5D6F8DB0E8ADB57180912C3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A3DBC2B1F27A1F2F44EF33AD /* libPods-finance.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,11 +112,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C700C85226CE151001BC3D2 /* Build configuration list for PBXNativeTarget "finance" */;
 			buildPhases = (
-				ED11ECEAA6D6F7A08DA9F25A /* [CP] Check Pods Manifest.lock */,
 				1C700C6F226CE14F001BC3D2 /* Sources */,
 				1C700C70226CE14F001BC3D2 /* Frameworks */,
 				1C700C71226CE14F001BC3D2 /* Resources */,
-				209A552A0A570CD54D458C3C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,53 +171,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		209A552A0A570CD54D458C3C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-finance/Pods-finance-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC-C++/gRPCCertificates.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-finance/Pods-finance-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ED11ECEAA6D6F7A08DA9F25A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-finance-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1C700C6F226CE14F001BC3D2 /* Sources */ = {
@@ -397,7 +332,6 @@
 		};
 		1C700C86226CE151001BC3D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 75044720B6725B7AE481B7B7 /* Pods-finance.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -416,7 +350,6 @@
 		};
 		1C700C87226CE151001BC3D2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43F70DF91180E3A13DB9812A /* Pods-finance.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
