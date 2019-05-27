@@ -607,8 +607,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emerson R de Freitas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3U-Wn-1HP">
-                                <rect key="frame" x="20" y="394" width="280" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emerson R de Freitas" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3U-Wn-1HP">
+                                <rect key="frame" x="20" y="394" width="280" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -650,6 +650,9 @@
                         <viewLayoutGuide key="safeArea" id="Gu0-6v-V7Y"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sair" image="poweroff" id="Phx-Oz-Ncp"/>
+                    <connections>
+                        <outlet property="lblColaboradores" destination="y3U-Wn-1HP" id="8U2-nB-qBK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCX-fU-byl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

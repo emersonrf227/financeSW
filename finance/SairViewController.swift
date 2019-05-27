@@ -13,10 +13,12 @@ class SairViewController: UIViewController {
     
     let firebaseauth = Auth.auth()
      
-
+    @IBOutlet weak var lblColaboradores: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        lblColaboradores.text = "Emerson R de Freitas \n Henrique Pereira de Lima \n Manassés Vitorino"
         
     }
     
